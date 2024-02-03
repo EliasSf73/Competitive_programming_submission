@@ -11,8 +11,8 @@ class Solution(object):
       
         
         if set(s)!=set(t):
-            l=[x for x in t if x not in s]
-            return l[0]
+            return [x for x in t if x not in s][0]
+           
           
                
         else:
