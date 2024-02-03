@@ -12,8 +12,9 @@ class Solution(object):
         
         if set(s)!=set(t):
             l=[x for x in t if x not in s]
-            if l:
-                return l[0]
+            return l[0]
+          
+               
         else:
             merged=ls+lt
             merged.sort()
