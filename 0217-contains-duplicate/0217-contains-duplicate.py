@@ -6,6 +6,5 @@ class Solution(object):
         """
         Set=list(set(nums))
         return len(nums)!=len(Set)
-        # print(Set)
-        # print(nums)
+        
         
