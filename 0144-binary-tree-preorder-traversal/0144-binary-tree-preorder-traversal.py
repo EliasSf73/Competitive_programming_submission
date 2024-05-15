@@ -16,3 +16,4 @@ class Solution(object):
             return [node.val]+helper(node.left)+helper(node.right)
         
         return helper(root)
+    
