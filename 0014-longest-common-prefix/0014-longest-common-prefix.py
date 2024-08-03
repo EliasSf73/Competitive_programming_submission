@@ -1,33 +1,32 @@
 class Solution(object):
     def longestCommonPrefix(self, strs):
-        if not strs:
-            return ""
-        prefix=strs[0]
-        for s in strs:
-            while not s.startswith(prefix):
-                prefix=prefix[:-1]
-                
-                if not prefix:
-                    return ""
-        return prefix
         """
         :type strs: List[str]
         :rtype: str
         """
-   
-
-       
-            
+        # if empty string
+        if not strs:
+            return ''
         
         
+        short=min(strs,key=len)
+        ln=len(short)
         
-        
-   
-            
-          
-                
-             
-        
-        
+        while ln>0:
+            found=all(x.startswith(short) for x in strs)
+            if found:
+                return short
+            else:
+                short=short[:-1]
+                ln-=1
+        return ''
      
+          
+           
+         
+             
+                    
             
+       
+                    
+        
